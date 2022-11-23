@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Артём Витков](https://up.htmlacademy.ru/adaptive/27/user/1976751).
-* Наставник: `Неизвестно`.
+* Наставник: [Арсений Березин](https://up.htmlacademy.ru/profession/frontender/15/adaptive/27/user/263537).
 
 ---
 
