@@ -17,6 +17,18 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 243px);
+    gap: 37px 145px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 243px);
+    gap: 62px;
+  }
 }
 
 .diet-instruction-card__text {

@@ -37,46 +37,50 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form class="diet-form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="diet-form__group">
-            <label class="diet-form__label">
-              Имя:*
-              <input class="diet-form__input" type="text" name="pet-name" value="Барсик">
-            </label>
-            <label class="diet-form__label">
-              Вес (кг):*
-              <input class="diet-form__input" type="number" name="pet-weight" value="7">
-            </label>
-            <label class="diet-form__label">
-              Возраст (лет):
-              <input class="diet-form__input" type="number" name="pet-age" value="7">
-            </label>
-          </fieldset>
-          <fieldset class="diet-form__group">
-            <label class="diet-form__label">
-              <input class="diet-form__input" type="radio" name="radio-group" value="weight-loss" checked>
-              Похудение
-            </label>
-            <label class="diet-form__label">
-              <input class="diet-form__input" type="radio" name="radio-group" value="weight-gain">
-              Набор массы
-            </label>
-            <label class="diet-form__label">
-              <input class="diet-form__input" type="radio" name="radio-group" value="need-help">
-              Не знаю (Нужен ваш совет)
-            </label>
-          </fieldset>
+          <div class="diet-form__wrapper diet-form__wrapper--basic">
+            <fieldset class="diet-form__group">
+              <label class="diet-form__label">
+                Имя:*
+                <input class="diet-form__input" type="text" name="pet-name" value="Барсик">
+              </label>
+              <label class="diet-form__label">
+                Вес (кг):*
+                <input class="diet-form__input" type="number" name="pet-weight" value="7">
+              </label>
+              <label class="diet-form__label">
+                Возраст (лет):
+                <input class="diet-form__input" type="number" name="pet-age" value="7">
+              </label>
+            </fieldset>
+            <fieldset class="diet-form__group">
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="radio" name="radio-group" value="weight-loss" checked>
+                Похудение
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="radio" name="radio-group" value="weight-gain">
+                Набор массы
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="radio" name="radio-group" value="need-help">
+                Не знаю (Нужен ваш совет)
+              </label>
+            </fieldset>
+          </div>
           <fieldset class="diet-form__group">
             <legend class="diet-form__legend">
               Контактные данные (владельца кота)
             </legend>
-            <label class="diet-form__label">
-              E-mail:*
-              <input class="diet-form__input" type="email" name="email" value="kuklachev@gmail.com">
-            </label>
-            <label class="diet-form__label">
-              Телефон:*
-              <input class="diet-form__input" type="tel" name="phone-number" value="8 (960) 900-60-90">
-            </label>
+            <div class="diet-form__wrapper diet-form__wrapper--contacts">
+              <label class="diet-form__label">
+                E-mail:*
+                <input class="diet-form__input" type="email" name="email" value="kuklachev@gmail.com">
+              </label>
+              <label class="diet-form__label">
+                Телефон:*
+                <input class="diet-form__input" type="tel" name="phone-number" value="8 (960) 900-60-90">
+              </label>
+            </div>
           </fieldset>
           <fieldset class="diet-form__group">
             <legend class="diet-form__legend">
@@ -88,22 +92,24 @@
             <legend class="diet-form__legend">
               Дополнительно
             </legend>
-            <label class="diet-form__label">
-              <input class="diet-form__input" type="checkbox" name="sugar-substitute" checked>
-              Cахарозаменитель
-            </label>
-            <label class="diet-form__label">
-              <input class="diet-form__input" type="checkbox" name="clean-water">
-              Питьевая вода
-            </label>
-            <label class="diet-form__label">
-              <input class="diet-form__input" type="checkbox" name="milk">
-              Молоко
-            </label>
-            <label class="diet-form__label">
-              <input class="diet-form__input" type="checkbox" name="vitamins">
-              Витамины
-            </label>
+            <div class="diet-form__wrapper diet-form__wrapper--additional">
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="sugar-substitute" checked>
+                Cахарозаменитель
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="clean-water">
+                Питьевая вода
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="milk">
+                Молоко
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="vitamins">
+                Витамины
+              </label>
+            </div>
           </fieldset>
           <button class="diet-form__submit-button button button--primary">Отправить заявку</button>
           <p class="diet-form__reference-text">* — Обязательные поля</p>
