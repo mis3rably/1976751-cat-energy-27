@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header page__centerer">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков «Cat Energy».</h1>
       <a class="header__logos" href="#">
         <img class="header__logo-image main-logo" src="img/logos/page-logo.svg" alt="Логотип Cat Energy." width="33" height="38">
         <img class="header__text-logo-image text-logo" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="101" height="18">
       </a>
       <nav class="header__nav">
-        <button class="header__nav-toggle-button visually-hidden" type="button" name="button">
+        <button class="header__nav-toggle-button" type="button" name="button">
           <span class="visually-hidden">Открыть меню навигации.</span>
         </button>
         <ul class="header__list">
@@ -30,7 +31,7 @@
       </nav>
     </header>
     <main class="main-index">
-      <section class="diet-advertisement">
+      <section class="diet-advertisement page__centerer">
         <h2 class="diet-advertisement__title page__heading">
           Функциональное питание для котов
         </h2>
@@ -40,7 +41,7 @@
         <img class="diet-advertisement__image" src="img/diet-product.png" alt="Фотография продукта «Cat Energy PRO»." width="280" height="270">
         <a class="diet-advertisement__link button button--primary" href="form.html">Подобрать программу</a>
       </section>
-      <section class="diet-selection">
+      <section class="diet-selection page__centerer">
         <h2 class="visually-hidden">Перечень программ питания.</h2>
         <ul class="diet-selection__list">
           <li class="diet-selection__item diet-selection-card diet-selection-card--slim">
@@ -67,7 +68,7 @@
           </li>
         </ul>
       </section>
-      <section class="diet-instruction">
+      <section class="diet-instruction page__centerer">
         <h2 class="diet-instruction__title page__heading">Как это работает</h2>
         <ul class="diet-instruction__list">
           <li class="diet-instruction__item diet-instruction-card diet-instruction-card--contains">
@@ -92,7 +93,7 @@
           </li>
         </ul>
       </section>
-      <section class="progress-calculation">
+      <section class="progress-calculation page__centerer">
         <h2 class="progress-calculation__title page__heading">Живой пример</h2>
         <p class="progress-calculation__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой
@@ -121,16 +122,19 @@
         </div>
       </section>
       <section class="office-location">
-        <h2 class="office-location__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="office-location__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </address>
-        <a class="office-location__map" href="https://yandex.ru/maps/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;width=580&amp;height=449&amp;lang=ru_RU"
-        alt="Офис по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург." style="border: 0;">
+        <div class="office-location__wrapper page__centerer">
+          <h2 class="office-location__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="office-location__address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </address>
+        </div>
+        <a class="office-location__map" href="https://yandex.ru/maps/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;source=constructorStatic" target="_blank">
+          <img class="office-location__image" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;width=580&amp;height=449&amp;lang=ru_RU"
+          alt="Офис по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург." style="border: 0;">
         </a>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer page__centerer">
       <h2 class="visually-hidden">Блок с ссылками на социальные сети интернет-магазина Cat Energy.</h2>
       <a class="footer__text-logo-link" href="#">
         <img class="footer__text-logo-image text-logo" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="101" height="18">
