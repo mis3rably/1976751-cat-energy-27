@@ -1,5 +1,16 @@
 .additional-products {
+  width: 320px;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 0 110px;
+  }
 }
 
 .additional-products__title {
@@ -13,6 +24,17 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .additional-products__name {

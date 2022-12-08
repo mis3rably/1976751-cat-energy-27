@@ -1,9 +1,32 @@
 .products-catalog {
   padding: 0 20px;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
 }
 
 .products-catalog__list {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: grid;
+  gap: 25px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, 324px);
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    gap: 60px;
+  }
 }

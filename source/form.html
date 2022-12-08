@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header page__centerer">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков «Cat Energy».</h1>
       <a class="header__logos" href="index.html">
         <img class="header__logo-image main-logo" src="img/logos/page-logo.svg" alt="Логотип Cat Energy." width="33" height="38">
         <img class="header__text-logo-image text-logo" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="101" height="18">
       </a>
       <nav class="header__nav">
-        <button class="header__nav-toggle-button visually-hidden" type="button" name="button">
+        <button class="header__nav-toggle-button" type="button" name="button">
           <span class="visually-hidden">Открыть меню навигации.</span>
         </button>
         <ul class="header__list">
@@ -30,92 +31,104 @@
       </nav>
     </header>
     <main class="main-form">
-      <h2 class="main-form__title page__heading">Подбор программы</h2>
-      <p class="main-form__description">
-        Заполните анкету, и мы подберем программу питания для вашего кота
-      </p>
-      <form class="diet-form" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="diet-form__group">
-          <label class="diet-form__label">
-            Имя:*
-            <input class="diet-form__input" type="text" name="pet-name" value="Барсик">
-          </label>
-          <label class="diet-form__label">
-            Вес (кг):*
-            <input class="diet-form__input" type="number" name="pet-weight" value="7">
-          </label>
-          <label class="diet-form__label">
-            Возраст (лет):
-            <input class="diet-form__input" type="number" name="pet-age" value="7">
-          </label>
-        </fieldset>
-        <fieldset class="diet-form__group">
-          <label class="diet-form__label">
-            <input class="diet-form__input" type="radio" name="radio-group" value="weight-loss" checked>
-            Похудение
-          </label>
-          <label class="diet-form__label">
-            <input class="diet-form__input" type="radio" name="radio-group" value="weight-gain">
-            Набор массы
-          </label>
-          <label class="diet-form__label">
-            <input class="diet-form__input" type="radio" name="radio-group" value="need-help">
-            Не знаю (Нужен ваш совет)
-          </label>
-        </fieldset>
-        <fieldset class="diet-form__group">
-          <legend class="diet-form__legend">
-            Контактные данные (владельца кота)
-          </legend>
-          <label class="diet-form__label">
-            E-mail:*
-            <input class="diet-form__input" type="email" name="email" value="kuklachev@gmail.com">
-          </label>
-          <label class="diet-form__label">
-            Телефон:*
-            <input class="diet-form__input" type="tel" name="phone-number" value="8 (960) 900-60-90">
-          </label>
-        </fieldset>
-        <fieldset class="diet-form__group">
-          <legend class="diet-form__legend">
-            Комментарий
-          </legend>
-          <textarea class="diet-form__textarea" name="notes" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота"></textarea>
-        </fieldset>
-        <fieldset class="diet-form__group">
-          <legend class="diet-form__legend">
-            Дополнительно
-          </legend>
-          <label class="diet-form__label">
-            <input class="diet-form__input" type="checkbox" name="sugar-substitute" checked>
-            Cахарозаменитель
-          </label>
-          <label class="diet-form__label">
-            <input class="diet-form__input" type="checkbox" name="clean-water">
-            Питьевая вода
-          </label>
-          <label class="diet-form__label">
-            <input class="diet-form__input" type="checkbox" name="milk">
-            Молоко
-          </label>
-          <label class="diet-form__label">
-            <input class="diet-form__input" type="checkbox" name="vitamins">
-            Витамины
-          </label>
-        </fieldset>
-        <button class="diet-form__submit-button button button--primary">Отправить заявку</button>
-        <p class="diet-form__reference-text">* — Обязательные поля</p>
-      </form>
+      <div class="main-form__wrapper page__centerer">
+        <h2 class="main-form__title page__heading">Подбор программы</h2>
+        <p class="main-form__description">
+          Заполните анкету, и мы подберем программу питания для вашего кота
+        </p>
+        <form class="diet-form" action="https://echo.htmlacademy.ru/" method="get">
+          <div class="diet-form__wrapper diet-form__wrapper--basic">
+            <fieldset class="diet-form__group">
+              <label class="diet-form__label">
+                Имя:*
+                <input class="diet-form__input" type="text" name="pet-name" value="Барсик">
+              </label>
+              <label class="diet-form__label">
+                Вес (кг):*
+                <input class="diet-form__input" type="number" name="pet-weight" value="7">
+              </label>
+              <label class="diet-form__label">
+                Возраст (лет):
+                <input class="diet-form__input" type="number" name="pet-age" value="7">
+              </label>
+            </fieldset>
+            <fieldset class="diet-form__group">
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="radio" name="radio-group" value="weight-loss" checked>
+                Похудение
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="radio" name="radio-group" value="weight-gain">
+                Набор массы
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="radio" name="radio-group" value="need-help">
+                Не знаю (Нужен ваш совет)
+              </label>
+            </fieldset>
+          </div>
+          <fieldset class="diet-form__group">
+            <legend class="diet-form__legend">
+              Контактные данные (владельца кота)
+            </legend>
+            <div class="diet-form__wrapper diet-form__wrapper--contacts">
+              <label class="diet-form__label">
+                E-mail:*
+                <input class="diet-form__input" type="email" name="email" value="kuklachev@gmail.com">
+              </label>
+              <label class="diet-form__label">
+                Телефон:*
+                <input class="diet-form__input" type="tel" name="phone-number" value="8 (960) 900-60-90">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="diet-form__group">
+            <legend class="diet-form__legend">
+              Комментарий
+            </legend>
+            <textarea class="diet-form__textarea" name="notes" rows="8" cols="80" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="diet-form__group">
+            <legend class="diet-form__legend">
+              Дополнительно
+            </legend>
+            <div class="diet-form__wrapper diet-form__wrapper--additional">
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="sugar-substitute" checked>
+                Cахарозаменитель
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="clean-water">
+                Питьевая вода
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="milk">
+                Молоко
+              </label>
+              <label class="diet-form__label">
+                <input class="diet-form__input" type="checkbox" name="vitamins">
+                Витамины
+              </label>
+            </div>
+          </fieldset>
+          <button class="diet-form__submit-button button button--primary">Отправить заявку</button>
+          <p class="diet-form__reference-text">* — Обязательные поля</p>
+        </form>
+      </div>
       <section class="office-location">
-        <h2 class="office-location__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="office-location__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-        </address>
-        <a class="office-location__map" href="https://yandex.ru/maps/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;width=580&amp;height=449&amp;lang=ru_RU"
-            alt="Офис по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург." style="border: 0;"></a>
+        <div class="office-location__wrapper page__centerer">
+          <h2 class="office-location__title">Приглашаем к сотрудничеству дилеров!</h2>
+          <address class="office-location__address">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </address>
+        </div>
+        <a class="office-location__map" href="https://yandex.ru/maps/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;source=constructorStatic" target="_blank">
+          <img class="office-location__image" src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aab1c1152a131e8cb3be69c83aa155206ab2d6b7a36c8f7c4b6f61060c8211517&amp;width=580&amp;height=449&amp;lang=ru_RU"
+        alt="Офис по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург." style="border: 0;">
+        </a>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer page__centerer">
       <h2 class="visually-hidden">Блок с ссылками на социальные сети интернет-магазина Cat Energy.</h2>
       <a class="footer__text-logo-link" href="index.html">
         <img class="footer__text-logo-image text-logo" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="101" height="18">

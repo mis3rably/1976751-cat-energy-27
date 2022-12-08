@@ -17,7 +17,44 @@
   }
 }
 
+.diet-form__wrapper {
+  display: grid;
+  gap: 12px;
+
+  &--basic,
+  &--contacts {
+    @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(2, 568px);
+      gap: 80px;
+    }
+  }
+
+  &--additional {
+    @media (min-width: @tablet-width) {
+      grid-template-columns: repeat(2, 224px);
+      gap: 32px 123px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(4, 221px);
+      gap: 104px;
+    }
+  }
+}
+
 .diet-form__textarea {
+  width: 280px;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+
   &::placeholder {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
@@ -30,6 +67,10 @@
 
 .diet-form__group {
   border: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .diet-form__legend {
