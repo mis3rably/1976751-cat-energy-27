@@ -1,34 +1,98 @@
 .progress-calculation {
-  width: 320px;
-  padding: 0 20px;
+  background-color: @special-light-grey;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
-    padding: 0 30px;
+    background: linear-gradient(180deg, @white 606px, @special-light-grey 606px);
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
-    padding: 0 110px;
+    background: linear-gradient(180deg, @white 135px, @basic-grey 135px);
+  }
+}
+
+.progress-calculation__wrapper {
+  width: 100%;
+  padding: 25px 6.25% 40px;
+  max-width: 1440px;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 3.9% 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 75px;
+    display: flex;
+  }
+}
+
+.progress-calculation__column {
+  @media (min-width: @desktop-width) {
+    width: 50%;
+    margin-right: auto;
+  }
+}
+
+.progress-calculation__feature:first-child {
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
+}
+
+.progress-calculation__features {
+  display: flex;
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.progress-calculation__controls {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    margin-top: 54px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.progress-calculation__title {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .progress-calculation__text {
   color: @dark-grey;
-}
+  margin: 0;
+  margin-top: 40px;
 
-.progress-calculation__feature {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
-}
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 63px;
+  }
 
-.progress-calculation__description {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 146px;
+    width: 436px;
+  }
 }
 
 .progress-calculation__total {
@@ -37,4 +101,57 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-top: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: end;
+    margin-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 55px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.progress-calculation__meal-cost {
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-left: 63px;
+  }
+}
+
+.progress-calculation__slider {
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 104px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }

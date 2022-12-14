@@ -1,0 +1,49 @@
+.diet-benefit {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  width: 124px;
+  border: 1px solid @darken-grey;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    width: 162px;
+  }
+}
+
+.diet-benefit__description {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  min-height: 20px;
+  position: absolute;
+  top: 46px;
+  display: block;
+  max-width: 87px;
+  text-align: center;
+  padding: 0 14px;
+  word-wrap: break-word;
+  background-color: @special-light-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 150px;
+    padding: 0 10px;
+    top: 59px;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic-grey;
+  }
+}

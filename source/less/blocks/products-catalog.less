@@ -1,15 +1,45 @@
 .products-catalog {
-  padding: 0 20px;
-  width: 320px;
+  padding: 0 6.25%;
+  width: 100%;
+  max-width: 1440px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1440px;
     padding: 0 110px;
+  }
+}
+
+.products-catalog__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  padding-top: 27px;
+  padding-bottom: 41px;
+  margin: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 200%;
+    height: 1px;
+    background-color: @grey;
+    position: absolute;
+    top: 0;
+    left: -7.25%;
+  }
+
+  &::after {
+    content: "";
+    width: 200%;
+    height: 1px;
+    background-color: @grey;
+    position: absolute;
+    bottom: 0;
+    left: -7.25%;
   }
 }
 
