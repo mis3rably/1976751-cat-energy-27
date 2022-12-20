@@ -39,18 +39,22 @@
 
 .office-location {
   position: relative;
+
+  &--grey {
+    background-color: @basic-grey;
+  }
 }
 
 .office-location__centerer {
   @media (min-width: @desktop-width) {
     width: 1440px;
-    height: 400px;
+    height: 200px;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    margin: 0 auto;
+    margin: auto;
   }
 }
 
@@ -79,7 +83,7 @@
     position: absolute;
     background-color: @white;
     left: 110px;
-    top: 115px;
+    top: 25px;
   }
 }
 

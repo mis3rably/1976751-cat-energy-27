@@ -1,8 +1,4 @@
 .diet-advertisement {
-  background: linear-gradient(180deg, rgba(104, 183, 56, 0.85) 302px, #ffffff 302px);
-  background-image: linear-gradient(180deg, rgba(104, 183, 56, 0.95) 302px, rgba(255, 255, 255, 0.9) 302px), url("../../img/diet-background.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -11,14 +7,34 @@
   }
 
   &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/diet-background.jpg");
+    width: 100%;
+    height: 302px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      content: none;
+    }
+
     @media (min-width: @desktop-width) {
       content: "";
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/diet-background-desktop.png");
       width: 50%;
       height: 694px;
+      margin: 0;
       background-color: @green;
       position: absolute;
       top: -141px;
-      right: 0;
+      left: 50%;
+      z-index: 0;
     }
   }
 }
@@ -107,10 +123,14 @@
 
 .diet-advertisement__link {
   text-decoration: none;
+  width: 100%;
+  height: 40px;
 
   @media (min-width: @tablet-width) {
     margin-left: 90px;
     z-index: 1;
     margin-top: 49px;
+    width: 244px;
+    height: 54px;
   }
 }
