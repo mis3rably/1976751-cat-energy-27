@@ -109,6 +109,14 @@
   flex-wrap: wrap;
   z-index: 2;
 
+  &--underline {
+    border-bottom: 1px solid @special-grey;
+
+    @media (min-width: @tablet-width) {
+      border-bottom: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     padding: 24px 30px;
   }

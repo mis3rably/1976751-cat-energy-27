@@ -9,6 +9,13 @@
   justify-content: center;
   align-items: center;
 
+  &--bigger-content {
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 0px;
+    }
+  }
+
   &--primary {
     color: @white;
     background-color: @green;
