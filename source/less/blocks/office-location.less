@@ -5,31 +5,98 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-}
+  color: @special-black;
+  width: 139px;
 
-.office-location {
-  @media (min-width: @desktop-width) {
-    position: relative;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 164px;
   }
 }
 
 .office-location__address {
   line-height: 20px;
   font-style: normal;
-  color: @special-dark-grey;
+  color: @dark-grey;
+  width: 139px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+    width: 164px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+}
+
+.office-location {
+  position: relative;
+
+  &--grey {
+    background-color: @basic-grey;
+  }
+}
+
+.office-location__centerer {
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.office-location__city {
+  @media (min-width: @tablet-width) {
+    margin-top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .office-location__wrapper {
-  width: 320px;
-  padding: 0 20px;
+  width: 100%;
+  padding: 26px 6.25%;
+  display: flex;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
-    padding: 0 30px;
+    padding: 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 565px;
+    position: absolute;
+    background-color: @white;
+    left: 110px;
+    top: 25px;
   }
 }
 
 .office-location__image {
   width: 100%;
   max-height: 400px;
+}
+
+.office-location__map {
+  width: 100%;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
+  }
 }

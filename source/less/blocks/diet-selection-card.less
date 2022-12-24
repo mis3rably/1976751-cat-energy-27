@@ -1,16 +1,45 @@
 .diet-selection-card {
   background-color: @basic-grey;
-  padding: 0 20px;
+  padding: 21px 7.14% 18px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding: 77px 7.47% 53px;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 47px 52px 55px;
+    display: block;
+    width: 570px;
+  }
 }
 
 .diet-selection-card__title {
   font-family: "Oswald", sans-serif;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 53px;
   color: @black;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
+  margin-left: 69px;
+  min-height: 53px;
+  vertical-align: middle;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 0;
+    min-height: initial;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 162px;
+    margin-top: 30px;
+    min-height: initial;
+  }
 }
 
 .diet-selection-card__descripion {
@@ -19,6 +48,124 @@
   line-height: 18px;
   color: @dark-grey;
   margin: 0;
+  margin-top: 22px;
+  padding-bottom: 23px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+    padding-bottom: 0;
+    color: @black;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 73px;
+    padding-bottom: 0;
+    color: @black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: @special-grey;
+    bottom: 0;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      content: none;
+    }
+  }
+}
+
+.diet-selection-card__column {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.diet-selection-card__img-wrapper {
+  background-color: @green;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 27px;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 0;
+    order: 4;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 44px;
+  }
+}
+
+.diet-selection-card__img {
+  position: absolute;
+}
+
+.diet-selection-card__img-wrapper .diet-selection-card__img--slim {
+  top: -3px;
+  left: 6px;
+
+  @media (min-width: @tablet-width) {
+    width: 140px;
+    height: 194px;
+    top: -4px;
+    left: 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;
+    height: 97px;
+    top: 0;
+    left: 19px;
+  }
+}
+
+.diet-selection-card__img-wrapper .diet-selection-card__img--pro {
+  top: 11px;
+  left: -9px;
+
+  @media (min-width: @tablet-width) {
+    width: 268px;
+    height: 112px;
+    top: 42px;
+    left: -47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
+    height: 56px;
+    top: 25px;
+    left: -27px;
+  }
+}
+
+.diet-selection__item:not(:first-child) {
+  margin-top: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .diet-selection-card__link {
@@ -29,4 +176,32 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
+  width: 130px;
+  margin-top: 19px;
+  display: block;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 52px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 23px;
+  }
+
+  &::after {
+    content: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' d='M0 6h18'/%3E%3Cpath d='m24 6-6.8 5.2V.8L24 6Z' fill='%23000'/%3E%3C/svg%3E");
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    left: 97px;
+    bottom: 5px;
+
+    @media (min-width: @tablet-width) {
+      left: 127px;
+      bottom: 20px;
+    }
+  }
 }

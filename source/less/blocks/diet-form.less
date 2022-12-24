@@ -4,9 +4,133 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  display: flex;
+  gap: 13px;
+  word-break: keep-all;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:not(:first-child) {
+    margin-top: 13px;
+  }
+}
+
+.diet-form__label--checkbox:not(:first-child) {
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.diet-form__label--radio,
+.diet-form__label--checkbox {
+  min-height: 30px;
+  padding-left: 45px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+    min-height: 40px;
+  }
+}
+
+.diet-form__wrapper--contacts .diet-form__label {
+  margin-top: 0;
+}
+
+.diet-form__marker {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 1px solid @darken-grey;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.diet-form__marker--radio {
+  border-radius: 50%;
+}
+
+.diet-form__input:checked + .diet-form__marker--radio::after {
+  content: "";
+  background-color: @green;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.diet-form__input:checked + .diet-form__marker--checkbox::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='19' viewBox='0 0 24 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15.499L1.4 6.90101L0 8.48485L9 18.6667L24 1.69697L22.6 0L9 15.499Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+    width: 24px;
+    height: 18px;
+  }
 }
 
 .diet-form__input {
+  min-width: 0;
+  padding: 0 20px;
+
+  &--email {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.5 5.5v8h17v-8M.5.5h17v2L9 8.5l-8.5-6v-2Z' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    padding-right: 35px;
+  }
+
+  &--tel {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5 0.5V5.5H2.5V10.5H5.5V15.5H3C1.5 15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    padding-right: 35px;
+  }
+
+  &[type="text"],
+  &[type="number"],
+  &[type="email"],
+  &[type="tel"] {
+    height: 45px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border: 1px solid @special-darken-grey;
+    box-sizing: border-box;
+
+    @media (min-width: @desktop-width) {
+      height: 50px;
+    }
+  }
+
   &[type] {
     font-family: "Oswald", sans-serif;
     font-weight: 400;
@@ -14,24 +138,92 @@
     line-height: 18px;
     text-transform: uppercase;
     color: @dark-grey;
+
+    @media (min-width: @desktop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 
+.diet-form__input::-webkit-outer-spin-button,
+.diet-form__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
 .diet-form__wrapper {
+  width: 100%;
   display: grid;
   gap: 12px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 
-  &--basic,
   &--contacts {
+    margin-top: 35px;
+
     @media (min-width: @desktop-width) {
-      grid-template-columns: repeat(2, 568px);
-      gap: 80px;
+      margin-top: 76px;
     }
   }
 
   &--additional {
+    margin-top: 34px;
+
     @media (min-width: @tablet-width) {
-      grid-template-columns: repeat(2, 224px);
+      width: 91%;
+      margin-top: 57px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 100%;
+      margin-top: 57px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &--submit {
+    display: flex;
+    padding: 21px 6.25% 32px;
+    gap: 21px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: @tablet-width) {
+      gap: 64px;
+      padding: 21px 9.11% 32px;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: @desktop-width) {
+      gap: 84px;
+      padding: 31px 110px 82px;
+    }
+  }
+
+  &--basic {
+    @media (min-width: @tablet-width) {
+      padding-top: 44px;
+      gap: 31px;
+    }
+  }
+
+  &--2-columns {
+    @media (min-width: @desktop-width) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+    }
+  }
+
+  &--4-columns {
+    @media (min-width: @tablet-width) {
+      grid-template-columns: repeat(2, minmax(224px, 1fr));
       gap: 32px 123px;
     }
 
@@ -42,17 +234,43 @@
   }
 }
 
-.diet-form__textarea {
-  width: 280px;
-  padding: 0;
-  margin: 0;
+.diet-form__submit-button {
+  width: 100%;
+  height: 40px;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: 282px;
+    height: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1200px;
+    width: 568px;
+  }
+}
+
+.diet-form__textarea-wrapper {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.diet-form__textarea {
+  width: 100%;
+  margin: 38px auto 0 auto;
+  padding-left: 15px;
+  padding-right: 12px;
+  padding-top: 10px;
+  border: 1px solid @special-darken-grey;
+  resize: none;
+  min-height: 150px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 76px;
+    min-height: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 76px;
+    min-height: 174px;
   }
 
   &::placeholder {
@@ -62,24 +280,128 @@
     line-height: 18px;
     text-transform: uppercase;
     color: @dark-grey;
+
+    @media (min-width: @desktop-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 }
 
 .diet-form__group {
   border: 0;
-  padding: 0;
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+  padding-top: 22px;
+  padding-bottom: 19px;
   margin: 0;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 9.11%;
+    padding-right: 9.11%;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 110px;
+    padding-right: 110px;
+    margin: 0 auto;
+  }
+
+  &--grey-borders {
+    border-top: 1px solid @special-grey;
+    border-bottom: 1px solid @special-grey;
+
+    @media (min-width: @tablet-width) {
+      border: 1px solid @special-darken-grey;
+      padding-left: 28px;
+      padding-right: 28px;
+      width: 82%;
+      margin: 0 auto;
+    }
+  }
+
+  &--padding-top-none {
+    padding-top: 0;
+  }
+
+  &--vertical-padding-none {
+    @media (min-width: @desktop-width) {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--space-between {
+    justify-content: space-between;
+  }
 }
 
-.diet-form__legend {
+.diet-form__title-wrapper {
+  width: 100%;
+  max-width: 1440px;
+}
+
+.diet-form__title {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
-  line-height: 26px;
+  line-height: 24px;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 36px;
+    margin-top: 45px;
+    margin-left: -36px;
+
+    br {
+      display: none;
+    }
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1000%;
+      height: 2px;
+      background-color: @green;
+      top: 62%;
+      right: 100%;
+      z-index: -1;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 1000%;
+    height: 2px;
+    background-color: @green;
+    top: 62%;
+    left: 100%;
+    z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -40px;
+  }
 }
 
 .diet-form__reference-text {
   line-height: 16px;
+  margin: 0;
+}
+
+.diet-form__wrapper .diet-form__group {
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }

@@ -1,3 +1,56 @@
 .diet-instruction-card {
-  background-color: @white;
+  display: flex;
+  gap: 20px;
+  position: relative;
+  counter-increment: card-number;
+
+  &::after {
+    content: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: @basic-grey;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+
+    @media (min-width: @tablet-width) {
+      content: counter(card-number);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    gap: 31px;
+  }
+}
+
+.diet-instruction-card__text {
+  margin: 0;
+  color: @dark-grey;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 57px;
+  }
+}
+
+.diet-instruction-card__image {
+  width: 60px;
+  height: 60px;
+  background-color: @green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+  }
 }

@@ -1,37 +1,48 @@
 .diet-instruction {
-  width: 320px;
-  padding: 0 20px;
+  width: 100%;
+  padding: 45px 6.25%;
+  max-width: 1440px;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
-    padding: 0 30px;
+    padding-left: 3.9%;
+    padding-right: 14.19%;
+    border-bottom: 1px solid @grey;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
-    padding: 0 110px;
+    padding: 71px 110px 69px;
+    border-bottom: none;
+  }
+}
+
+.diet-instruction__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .diet-instruction__list {
   list-style-type: none;
   margin: 0;
+  margin-top: 40px;
   padding: 0;
   display: grid;
   gap: 20px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: repeat(2, 243px);
-    gap: 37px 145px;
+    grid-template-columns: repeat(2, minmax(247px, 32%));
+    gap: 37px 17.83%;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 243px);
     gap: 62px;
   }
-}
-
-.diet-instruction-card__text {
-  margin: 0;
-  color: @dark-grey;
 }
