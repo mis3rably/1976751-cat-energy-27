@@ -20,13 +20,17 @@
     background-size: cover;
     z-index: -1;
 
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/diet-background@2x.jpg");
+    }
+
     @media (min-width: @tablet-width) {
       content: none;
     }
 
     @media (min-width: @desktop-width) {
       content: "";
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/diet-background-desktop.png");
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/diet-background-desktop.jpg");
       width: 50%;
       height: 694px;
       margin: 0;
@@ -35,6 +39,10 @@
       top: -141px;
       left: 50%;
       z-index: 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/diet-background-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -104,7 +112,6 @@
   margin-top: 29px;
 
   @media (min-width: @tablet-width) {
-    content: url("../../img/diet-product--tablet.png");
     width: 709px;
     height: 609px;
     position: absolute;
@@ -112,7 +119,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    content: url("../../img/diet-product--desktop.png");
     width: 552px;
     height: 499px;
     top: -40px;

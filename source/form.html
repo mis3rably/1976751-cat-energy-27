@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <header class="header page__centerer header--underline">
+    <header class="header page__centerer">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков «Cat Energy».</h1>
       <a href="#" class="header__logos">
-        <img class="header__logo-image main-logo" src="img/logos/page-logo.svg" alt="Логотип Cat Energy." width="33" height="38">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logos/page-logo--desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/page-logo--tablet.svg">
+          <img class="header__logo-image main-logo" src="img/logos/page-logo.svg" alt="Логотип Cat Energy." width="33" height="38">
+        </picture>
         <img class="header__text-logo-image text-logo" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="101" height="18">
       </a>
       <nav class="header__nav header__nav--nojs header__nav--closed">
