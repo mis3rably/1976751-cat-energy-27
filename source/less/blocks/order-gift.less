@@ -23,11 +23,16 @@
 
   @media (min-width: @tablet-width) {
     margin: 69px 0 76px;
+    flex-direction: row;
+    padding: 66px 124px 69px 90px;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0;
-    padding: 63px 43px 42px 41px;
+    padding: 63px 37px 42px 41px;
+    flex-direction: column;
+    gap: 58px;
   }
 }
 
@@ -38,4 +43,24 @@
   margin: 0;
   margin-top: 61px;
   text-align: center;
+
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 161px;
+    text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 161px;
+    text-align: center;
+  }
 }

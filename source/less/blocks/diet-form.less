@@ -9,6 +9,11 @@
   word-break: keep-all;
   align-items: center;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 20px;
     line-height: 30px;
@@ -16,6 +21,14 @@
 
   &:not(:first-child) {
     margin-top: 13px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 28px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: 22px;
+    }
   }
 }
 
@@ -39,6 +52,7 @@
 
 .diet-form__wrapper--contacts .diet-form__label {
   margin-top: 0;
+  gap: 20px;
 }
 
 .diet-form__marker {
@@ -105,8 +119,15 @@
   &--email {
     background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.5 5.5v8h17v-8M.5.5h17v2L9 8.5l-8.5-6v-2Z' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right 13px center;
+    background-position: right 17px center;
     padding-right: 35px;
+    padding-left: 11px;
+    padding-top: 3px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 22px;
+      padding-top: 0;
+    }
   }
 
   &--tel {
@@ -114,6 +135,13 @@
     background-repeat: no-repeat;
     background-position: right 13px center;
     padding-right: 35px;
+    padding-left: 13px;
+    padding-top: 7px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 20px;
+      padding-top: 0;
+    }
   }
 
   &[type="text"],
@@ -139,6 +167,11 @@
     text-transform: uppercase;
     color: @dark-grey;
 
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
     @media (min-width: @desktop-width) {
       font-size: 20px;
       line-height: 30px;
@@ -163,17 +196,23 @@
   &--contacts {
     margin-top: 35px;
 
+    @media (min-width: @tablet-width) {
+      margin-top: 74px;
+      gap: 27px;
+    }
+
     @media (min-width: @desktop-width) {
-      margin-top: 76px;
+      margin-top: 72px;
     }
   }
 
   &--additional {
     margin-top: 34px;
+    gap: 0;
 
     @media (min-width: @tablet-width) {
       width: 91%;
-      margin-top: 57px;
+      margin-top: 55px;
       margin-left: 0;
       margin-right: 0;
     }
@@ -188,7 +227,7 @@
 
   &--submit {
     display: flex;
-    padding: 21px 6.25% 32px;
+    padding: 17px 6.25% 32px;
     gap: 21px;
     flex-direction: column;
     align-items: center;
@@ -196,7 +235,8 @@
 
     @media (min-width: @tablet-width) {
       gap: 64px;
-      padding: 21px 9.11% 32px;
+      padding: 21px 9.11% 72px;
+      margin-top: 22px;
       flex-direction: row;
       justify-content: flex-start;
     }
@@ -204,13 +244,14 @@
     @media (min-width: @desktop-width) {
       gap: 84px;
       padding: 31px 110px 82px;
+      margin-top: 13px;
     }
   }
 
   &--basic {
     @media (min-width: @tablet-width) {
-      padding-top: 44px;
-      gap: 31px;
+      padding-top: 67px;
+      gap: 65px;
     }
   }
 
@@ -224,7 +265,7 @@
   &--4-columns {
     @media (min-width: @tablet-width) {
       grid-template-columns: repeat(2, minmax(224px, 1fr));
-      gap: 32px 123px;
+      gap: 27px 119px;
     }
 
     @media (min-width: @desktop-width) {
@@ -234,13 +275,23 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .diet-form__label--radio:not(:first-child) {
+    margin-top: 13px;
+  }
+}
+
 .diet-form__submit-button {
   width: 100%;
   height: 40px;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: @tablet-width) {
     width: 282px;
     height: 52px;
+    font-size: 20px;
+    line-height: 0px;
   }
 
   @media (min-width: @desktop-width) {
@@ -255,7 +306,7 @@
 
 .diet-form__textarea {
   width: 100%;
-  margin: 38px auto 0 auto;
+  margin: 35px auto 0 auto;
   padding-left: 15px;
   padding-right: 12px;
   padding-top: 10px;
@@ -264,8 +315,8 @@
   min-height: 150px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 76px;
     min-height: 174px;
+    margin: 69px auto 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -281,6 +332,11 @@
     text-transform: uppercase;
     color: @dark-grey;
 
+    @media (min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
     @media (min-width: @desktop-width) {
       font-size: 20px;
       line-height: 30px;
@@ -293,7 +349,7 @@
   padding-left: 6.25%;
   padding-right: 6.25%;
   padding-top: 22px;
-  padding-bottom: 19px;
+  padding-bottom: 13px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -320,6 +376,7 @@
       padding-right: 28px;
       width: 82%;
       margin: 0 auto;
+      padding-bottom: 25px;
     }
   }
 
@@ -337,6 +394,15 @@
 
   &--space-between {
     justify-content: space-between;
+  }
+
+  &--contacts {
+    padding-top: 31px;
+  }
+
+  &--comments {
+    padding-top: 14px;
+    padding-bottom: 21px;
   }
 }
 
@@ -373,9 +439,13 @@
       width: 1000%;
       height: 2px;
       background-color: @green;
-      top: 62%;
+      top: 15px;
       right: 100%;
       z-index: -1;
+
+      @media (min-width: @tablet-width) {
+        top: 19px;
+      }
     }
   }
 
@@ -385,13 +455,18 @@
     width: 1000%;
     height: 2px;
     background-color: @green;
-    top: 62%;
+    top: 15px;
     left: 100%;
     z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      top: 19px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-left: -40px;
+    margin-top: 42px;
   }
 }
 
