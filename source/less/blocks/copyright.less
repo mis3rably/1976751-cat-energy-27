@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 20px 0;
+  padding: 14px 0 40px;
 
   @media (min-width: @tablet-width) {
     width: auto;
@@ -10,10 +10,16 @@
     align-items: center;
     gap: 23px;
   }
+
+  @media (min-width: @desktop-width) {
+    gap: 28px;
+  }
 }
 
 .copyright__link {
   display: block;
+  width: 27px;
+  height: 34px;
 }
 
 .copyright__title {

@@ -27,6 +27,10 @@
   }
 }
 
+.diet-instruction-card:first-child::after {
+  right: 21px;
+}
+
 .diet-instruction-card__text {
   margin: 0;
   color: @dark-grey;
@@ -36,6 +40,14 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 57px;
+  }
+
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 }
 

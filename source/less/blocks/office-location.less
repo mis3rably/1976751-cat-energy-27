@@ -28,6 +28,10 @@
     width: 164px;
   }
 
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
+
   br {
     display: none;
 
@@ -61,10 +65,7 @@
 .office-location__city {
   @media (min-width: @tablet-width) {
     margin-top: 18px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 0;
+    display: block;
   }
 }
 
@@ -75,7 +76,7 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding: 56px 70px;
+    padding: 60px 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -83,7 +84,10 @@
     position: absolute;
     background-color: @white;
     left: 110px;
-    top: 25px;
+    top: -8px;
+    padding: 60px 79px;
+    justify-content: flex-start;
+    gap: 93px;
   }
 }
 

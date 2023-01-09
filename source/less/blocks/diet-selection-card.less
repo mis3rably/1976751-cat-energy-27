@@ -5,12 +5,12 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    padding: 77px 7.47% 53px;
+    padding: 77px 7.47% 57px;
     align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 47px 52px 55px;
+    padding: 47px 52px 59px;
     display: block;
     width: 570px;
   }
@@ -24,7 +24,7 @@
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
-  margin-left: 69px;
+  margin-left: 72px;
   min-height: 53px;
   vertical-align: middle;
 
@@ -85,7 +85,7 @@
 
 .diet-selection-card__column {
   @media (min-width: @tablet-width) {
-    width: 50%;
+    width: 56%;
   }
 
   @media (min-width: @desktop-width) {
@@ -99,14 +99,16 @@
   height: 50px;
   border-radius: 50%;
   position: absolute;
-  top: 27px;
+  top: 24px;
+  left: 23px;
 
   @media (min-width: @tablet-width) {
     width: 200px;
     height: 200px;
     position: relative;
-    top: 0;
+    top: -4px;
     order: 4;
+    left: -7px;
     margin-left: auto;
   }
 
@@ -114,7 +116,8 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 44px;
+    top: 47px;
+    left: 52px;
   }
 }
 
@@ -136,8 +139,8 @@
   @media (min-width: @desktop-width) {
     width: 70px;
     height: 97px;
-    top: 0;
-    left: 19px;
+    top: -6px;
+    left: 15px;
   }
 }
 
@@ -155,16 +158,8 @@
   @media (min-width: @desktop-width) {
     width: 134px;
     height: 56px;
-    top: 25px;
-    left: -27px;
-  }
-}
-
-.diet-selection__item:not(:first-child) {
-  margin-top: 20px;
-
-  @media (min-width: @desktop-width) {
-    margin-top: 0;
+    top: 20px;
+    left: -19px;
   }
 }
 
@@ -187,8 +182,8 @@
     margin-top: 52px;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-top: 23px;
+  @media (min-width: @desktop-width) {
+    margin-top: 27px;
   }
 
   &::after {
@@ -196,12 +191,17 @@
     width: 24px;
     height: 12px;
     position: absolute;
-    left: 97px;
+    left: 100px;
     bottom: 5px;
 
     @media (min-width: @tablet-width) {
       left: 127px;
       bottom: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 131px;
+      bottom: 21px;
     }
   }
 }
