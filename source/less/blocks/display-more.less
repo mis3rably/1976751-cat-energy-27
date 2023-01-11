@@ -24,6 +24,14 @@
   margin: 0;
   margin-top: 23px;
 
+  br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 49px;
     font-size: 20px;

@@ -13,13 +13,12 @@
   <body class="page__body">
     <header class="header page__centerer">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков «Cat Energy».</h1>
-      <a href="#" class="header__logos">
+      <a href="index.html" class="header__logos">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logos/page-logo--desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logos/page-logo--tablet.svg">
-          <img class="header__logo-image main-logo" src="img/logos/page-logo.svg" alt="Логотип Cat Energy." width="33" height="38">
+          <source media="(min-width: 1440px)" srcset="img/logos/header-logo--desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logos/header-logo--tablet.svg">
+          <img class="header__logo-image main-logo" src="img/logos/header-logo--mobile.svg" alt="Логотип Cat Energy.">
         </picture>
-        <img class="header__text-logo-image text-logo" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="101" height="18">
       </a>
       <nav class="header__nav header__nav--nojs header__nav--closed">
         <button class="header__toggle" type="button" name="button">
@@ -169,7 +168,7 @@
                 <ul class="product-card__description-list">
                   <li class="product-card__description-item">
                     <span class="product-card__description-name">Масса</span>
-                    <span class="product-card__description-value">1000 г</span>
+                    <span class="product-card__description-value">500 г</span>
                   </li>
                   <li class="product-card__description-item">
                     <span class="product-card__description-name">Вкус</span>
@@ -244,7 +243,7 @@
           <li class="products-catalog__item display-more">
             <div class="display-more__wrapper">
               <a href="#" class="display-more__link"></a>
-              <h2 class="display-more__title">Показать еще 100500 товаров</h2>
+              <h2 class="display-more__title">Показать еще <br> 100500 товаров</h2>
               <p class="display-more__description">На самом деле вкусов <br> гораздо больше!</p>
             </div>
             <button class="display-more__button button button--secondary">Показать все</button>
@@ -300,9 +299,11 @@
           </ul>
           <div class="additional-products__gift order-gift">
             <div class="order-gift__wrapper">
-              <svg class="order-gift__pic" width="58" height="62" viewBox="0 0 58 62" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M54 28.7H4a3.2 3.2 0 0 1-3.2-3.1V16c0-1.8 1.5-3.2 3.2-3.2h50c1.8 0 3.2 1.4 3.2 3.2v9.5c0 1.7-1.4 3.1-3.2 3.1ZM4 15.3c-.4 0-.7.4-.7.8v9.5c0 .4.3.7.7.7h50c.4 0 .8-.3.8-.7V16c0-.4-.4-.8-.8-.8H4Z" fill="#fff"/><path d="M47 61.1H11a6.1 6.1 0 0 1-6.1-6V27.5c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v27.6c0 2 1.7 3.6 3.7 3.6h36c2 0 3.7-1.6 3.7-3.6V27.5c0-.7.6-1.2 1.2-1.2.7 0 1.3.5 1.3 1.2v27.6c0 3.3-2.8 6-6.2 6Z" fill="#fff"/><path d="M29 61.1c-.7 0-1.2-.5-1.2-1.2V27.5c0-.7.5-1.2 1.2-1.2s1.2.5 1.2 1.2v32.4c0 .7-.5 1.2-1.2 1.2ZM13.8 15.3a7.8 7.8 0 0 1-3.2-10.6 8 8 0 0 1 10.7-3.1c5.8 3.1 9 11.8 9 12.2l-2.2.8s-3-8.2-8-10.9a5.4 5.4 0 1 0-5.2 9.5l-1 2.1Z" fill="#fff"/><path d="m44.2 15.3-1.1-2a5.4 5.4 0 0 0-1-10 5.4 5.4 0 0 0-4.2.4c-5 2.7-8 10.8-8 11l-2.2-.9c0-.4 3.2-9 9-12.2a7.9 7.9 0 0 1 11.3 9c-.6 2.1-2 3.7-3.8 4.7ZM52 45H6c-.6 0-1.1-.6-1.1-1.3 0-.6.5-1.2 1.2-1.2h45.8c.7 0 1.3.6 1.3 1.2 0 .7-.6 1.2-1.3 1.2Z" fill="#fff"/></svg>
+              <svg class="order-gift__pic" width="58" height="62">
+                <use xlink:href="img/sprite.svg#order-gift"></use>
+              </svg>
               <h2 class="visually-hidden">Описание подарка при заказе.</h2>
-              <p class="order-gift__text">Закажите все и получите чехол для кота в подарок!</p>
+              <p class="order-gift__text">Закажите все <br> и получите чехол для кота в подарок!</p>
             </div>
           </div>
         </div>
@@ -310,7 +311,7 @@
       <section class="office-location office-location--grey">
         <div class="office-location__centerer">
           <div class="office-location__wrapper">
-            <h2 class="office-location__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <h2 class="office-location__title">Приглашаем <br> к сотрудничеству дилеров!</h2>
             <address class="office-location__address">
               ул. Большая Конюшенная, д. 19/8 <br>
               <span class="office-location__city">Санкт-Петербург</span>
@@ -324,23 +325,30 @@
       <div class="footer__container page__centerer">
         <h2 class="visually-hidden">Блок с ссылками на социальные сети интернет-магазина Cat Energy.</h2>
         <a class="footer__text-logo-link" href="#">
-          <img class="footer__text-logo-image text-logo" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="101" height="18">
+          <img class="footer__text-logo-image" src="img/logos/page-text-logo.svg" alt="Текстовый логотип Cat Energy." width="130" height="23">
         </a>
         <ul class="footer__socials-list">
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="https://vk.com/htmlacademy">
-              <svg class="footer__socials-link-logo" width="27" height="17" viewBox="0 0 27 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.34C0 1.48.52 1.02 1.55.96l3.97.02c.26 0 .44.13.53.38.4 1.26.86 2.34 1.37 3.25.5.92 1.17 1.97 1.99 3.16.07.15.18.23.34.23.13 0 .22-.06.3-.18l.07-.28.03-4.35c0-.3-.07-.5-.23-.6-.15-.1-.43-.18-.83-.23-.32-.05-.48-.23-.48-.55 0-.07 0-.12.02-.15C9.01.57 10.07.03 11.83.03l1.5-.03C14 0 14.55.16 15 .48c.44.32.67.82.67 1.5V7.7c.12.08.24.12.34.12.27 0 .5-.15.7-.45 1.95-2.58 3-4.31 3.17-5.18 0-.02.01-.06.05-.13.12-.25.33-.47.61-.65.29-.19.53-.31.75-.38a.55.55 0 0 1 .24-.05h4.13l.26.03c.36 0 .63.16.83.47.07.1.12.21.15.33a2.4 2.4 0 0 1 .06.55v.18a6.11 6.11 0 0 1-.94 2.2c-.5.78-1.15 1.62-1.93 2.53-.79.9-1.27 1.5-1.47 1.78-.16.2-.24.39-.24.56 0 .13.07.28.21.45l3.9 4.63c.2.26.31.56.31.88 0 .38-.16.7-.48.95-.32.25-.7.4-1.14.43l-.46.02h-4.04c-.02 0-.06 0-.11.02a.86.86 0 0 1-.1.01c-.4 0-.76-.16-1.1-.48-.12-.13-.96-1.12-2.5-2.97a1.39 1.39 0 0 0-.38-.32 38.47 38.47 0 0 0-.53 2.24l-.08.42a1.4 1.4 0 0 1-1.12 1.06l-.37.02h-2.61c-1.48 0-2.95-.63-4.41-1.9a19.3 19.3 0 0 1-3.96-4.95A47.51 47.51 0 0 1 .13 3.07 1.92 1.92 0 0 1 0 2.34Zm16.01 6.51c-.37 0-.7-.1-1.01-.29a.9.9 0 0 1-.45-.79V2c0-.34-.1-.58-.27-.72-.18-.14-.49-.21-.93-.21l-1.52.05c-.76 0-1.34.12-1.73.37.78.36 1.17.93 1.17 1.71v4.43a1.5 1.5 0 0 1-.53 1.04c-.32.28-.68.42-1.07.42-.53 0-.94-.24-1.22-.73a26.16 26.16 0 0 1-3.1-5.63l-.23-.66-3.55-.02c-.23 0-.36.01-.38.03-.03.03-.04.1-.04.22 0 .15.01.3.05.48l.56 1.4c1.49 3.64 3.11 6.51 4.86 8.6 1.75 2.1 3.47 3.15 5.16 3.15h2.66c.1 0 .19-.03.24-.09.05-.06.1-.17.13-.34l.06-.25.5-2.21c.15-.3.27-.5.38-.6.2-.2.42-.28.69-.28.43 0 .86.24 1.3.73l2.27 2.71c.14.22.3.33.45.33h4.4c.53 0 .8-.13.8-.38a.47.47 0 0 0-.08-.25l-3.87-4.55c-.3-.35-.45-.73-.45-1.13 0-.4.14-.8.43-1.16.23-.34.68-.9 1.34-1.67.67-.78 1.25-1.51 1.75-2.19.5-.68.82-1.3.98-1.85l.08-.33a.37.37 0 0 1-.02-.16c0-.07-.01-.14-.03-.19h-4.18c-.27.1-.48.25-.64.45L20.8 3c-.45 1.16-1.6 2.94-3.5 5.36-.36.33-.8.5-1.3.5Z" fill="#666"/></svg>
+              <span class="visually-hidden">Ссылка на HTMLAcademy в Вконтакте.</span>
+              <svg class="footer__socials-link-logo" width="27" height="17">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
             </a>
           </li>
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="https://www.youtube.com/user/htmlacademyru">
-              <svg class="footer__socials-link-logo" width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m15.85 8.8-5.24-3.5a.65.65 0 0 0-1.01.55v6.98a.65.65 0 0 0 1.01.54l5.24-3.49a.65.65 0 0 0 0-1.09Zm-4.94 2.8V7.08l3.4 2.27-3.4 2.27Zm12.48-8.56a2.4 2.4 0 0 0-1.45-1.63C18.22-.02 12.25 0 12 0S5.78-.02 2.06 1.4A2.4 2.4 0 0 0 .61 3.05 25.32 25.32 0 0 0 0 9.34c0 3.26.33 5.22.61 6.3a2.4 2.4 0 0 0 1.45 1.63c3.72 1.43 9.69 1.4 9.94 1.4h.08c.75 0 6.31-.04 9.86-1.4a2.4 2.4 0 0 0 1.45-1.64c.28-1.07.61-3.03.61-6.3 0-3.25-.33-5.22-.61-6.29Zm-1.27 12.27a1.1 1.1 0 0 1-.65.74c-3.5 1.34-9.4 1.32-9.47 1.32-.07 0-5.98.02-9.47-1.32a1.09 1.09 0 0 1-.65-.74c-.27-1-.57-2.85-.57-5.97 0-3.12.3-4.97.57-5.97a1.1 1.1 0 0 1 .65-.74C6.03 1.29 11.93 1.3 12 1.3c.07 0 5.98-.02 9.47 1.32a1.1 1.1 0 0 1 .65.74c.27 1 .57 2.85.57 5.97 0 3.12-.3 4.96-.57 5.97Z" fill="#666"/></svg>
+              <span class="visually-hidden">Ссылка на HTMLAcademy в Youtube.</span>
+              <svg class="footer__socials-link-logo" width="24" height="19">
+                <use xlink:href="img/sprite.svg#icon-yt"></use>
+              </svg>
             </a>
           </li>
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="https://t.me/htmlacademy">
-              <svg class="footer__socials-link-logo" width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4608 0.152905C19.6393 0.302216 19.7255 0.534898 19.6872 0.764481L17.0611 16.5214C17.0244 16.7411 16.8789 16.9273 16.6745 17.0159C16.47 17.1045 16.2346 17.0833 16.0493 16.9597L8.17082 11.7074C8.01771 11.6054 7.91447 11.4437 7.88624 11.2619C7.858 11.08 7.90738 10.8947 8.02233 10.751L10.633 7.48773L6.27303 10.3944C6.077 10.525 5.82597 10.5407 5.61524 10.4353L0.362931 7.80915C0.127693 7.69153 -0.0146529 7.44488 0.00119976 7.18235C0.0170525 6.91983 0.188044 6.6921 0.435726 6.60364L18.8188 0.0382579C19.038 -0.0400244 19.2822 0.00359465 19.4608 0.152905ZM2.32626 7.32275L5.86168 9.09046L13.4231 4.0495C13.6925 3.86994 14.0525 3.91349 14.2712 4.1521C14.49 4.3907 14.5022 4.75314 14.3 5.00591L9.49502 11.0121L15.9328 15.3039L18.2083 1.65058L2.32626 7.32275Z" fill="#666666"/>
+              <span class="visually-hidden">Ссылка на HTMLAcademy в Telegram.</span>
+              <svg class="footer__socials-link-logo" width="20" height="18">
+                <use xlink:href="img/sprite.svg#icon-tg"></use>
               </svg>
             </a>
           </li>

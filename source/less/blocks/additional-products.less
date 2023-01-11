@@ -52,7 +52,7 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    margin-top: 80px;
+    margin-top: 75px;
     border: 1px solid @darken-grey;
   }
 
@@ -130,7 +130,7 @@
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding: 25px 6.25% 35px;
+  padding: 33px 6.25% 35px;
 
   @media (min-width: @tablet-width) {
     padding: 0 3.95%;
@@ -148,6 +148,23 @@
 .additional-products__title-wrapper {
   max-width: 1440px;
   padding: 0 6.25%;
+  padding-top: 25px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-color: @grey;
+    width: 150%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      content: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0 3.95%;
@@ -196,7 +213,7 @@
     font-size: 16px;
     line-height: 20px;
     margin: 0;
-    gap: 49px;
+    gap: 53px;
   }
 
   @media (min-width: @desktop-width) {

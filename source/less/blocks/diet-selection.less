@@ -17,9 +17,25 @@
   padding: 0;
   list-style-type: none;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 9px;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
     gap: 80px;
-    margin-top: 50px;
+    margin: 0;
+  }
+}
+
+.diet-selection__item:not(:first-child) {
+  margin-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
