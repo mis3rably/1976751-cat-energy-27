@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -13,7 +13,7 @@
   <body class="page__body">
     <header class="header page__centerer">
       <h1 class="visually-hidden">Интернет-магазин фитнес еды для котиков «Cat Energy».</h1>
-      <a href="#" class="header__logos">
+      <a href="index.html" class="header__logos">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logos/header-logo--desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logos/header-logo--tablet.svg">
@@ -138,7 +138,7 @@
               </svg>
             </div>
             <p class="diet-instruction-card__text">
-              Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </p>
           </li>
         </ul>
@@ -165,7 +165,7 @@
                 </div>
               </div>
               <p class="progress-calculation__total">
-                  Затраты на питание:
+                  Затраты на питание:&nbsp;
                   <br>
                   <span class="progress-calculation__meal-cost">15 000</span>
                   руб.
@@ -174,6 +174,8 @@
           </div>
           <div class="progress-calculation__slider calculation-slider">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/progress-calculation__slider--tablet.webp 1x, img/progress-calculation__slider--tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/progress-calculation__slider.webp 1x, img/progress-calculation__slider@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/progress-calculation__slider--tablet.png 1x, img/progress-calculation__slider--tablet@2x.png 2x">
               <img class="calculation-slider__photo" src="img/progress-calculation__slider.png" srcset="img/progress-calculation__slider@2x.png 2x" alt="Фотография с котиками.">
             </picture>
@@ -188,7 +190,7 @@
           <div class="office-location__wrapper">
             <h2 class="office-location__title">Приглашаем <br> к сотрудничеству дилеров!</h2>
             <address class="office-location__address">
-              ул. Большая Конюшенная, д. 19/8 <br>
+              ул. Большая Конюшенная, д. 19/8<br>
               <span class="office-location__city">Санкт-Петербург</span>
             </address>
           </div>
