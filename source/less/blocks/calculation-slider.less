@@ -1,9 +1,6 @@
 .calculation-slider__button {
   width: 40px;
   height: 100%;
-  background-image: url("../../img/calculation-slider__button.png");
-  background-repeat: no-repeat;
-  background-position: center;
   border: 0;
   background-color: transparent;
   padding: 0;
@@ -14,6 +11,20 @@
   right: 0;
   margin: auto;
   transform-style: preserve-3d;
+  cursor: pointer;
+  color: @special-dark-grey-2;
+
+  svg {
+    fill: none;
+  }
+
+  &:hover {
+    color: @green;
+  }
+
+  &:active {
+    color: @darken-green;
+  }
 
   &::before {
     content: "";
@@ -27,6 +38,14 @@
     margin: 0 auto;
     transform: translateZ(-1px);
   }
+}
+
+.calculation-slider__button:hover::before {
+  background-color: @green;
+}
+
+.calculation-slider__button:active::before {
+  background-color: @darken-green;
 }
 
 .calculation-slider__photo {

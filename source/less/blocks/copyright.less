@@ -16,10 +16,27 @@
   }
 }
 
+.copyright__logo {
+  fill: @special-dark-grey-2;
+}
+
 .copyright__link {
-  display: block;
-  width: 27px;
-  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  text-decoration: none;
+
+  &:hover .copyright__logo {
+    fill: @green;
+  }
+
+  &:focus-visible .copyright__logo {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__title {

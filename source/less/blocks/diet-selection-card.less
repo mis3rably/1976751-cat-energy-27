@@ -175,17 +175,11 @@
   align-items: center;
   position: relative;
   gap: 25px;
-  background-image: url("../img/sprite.svg#icon-arrow");
-  background-size: 24px 12px;
-  background-repeat: no-repeat;
-  background-position: right 8px center;
   transition: 0.1s;
 
-  &:hover {
-    background-image: url("../img/sprite.svg#icon-arrow-hover");
-    background-size: 32px 12px;
+  &:hover svg {
+    transform: scale(1.2, 1) translateX(2px);
     transition: 0.1s;
-    background-position: right center;
   }
 
   &:active {

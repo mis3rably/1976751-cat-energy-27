@@ -139,6 +139,10 @@
   padding: 0 20px;
   border: 1px solid @special-darken-grey;
 
+  &:hover {
+    border-color: @darken-grey;
+  }
+
   &:focus-visible {
     outline: 2px solid @dark-grey;
   }
@@ -341,6 +345,14 @@
   border: 1px solid @special-darken-grey;
   resize: none;
   min-height: 150px;
+
+  &:hover {
+    border-color: @darken-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 174px;
