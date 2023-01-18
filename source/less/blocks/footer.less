@@ -27,6 +27,38 @@
 
 .footer__socials-link {
   display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--vk {
+    width: 27px;
+    height: 17px;
+    background-image: url("img/sprite.svg#icon-vk");
+    background-size: 27px 17px;
+
+    &:hover {
+      mask-image: url("img/sprite.svg#icon-vk-mask");
+      mask-size: 27px 17px;
+    }
+  }
+
+  &--tg {
+    background-image: url("img/sprite.svg#icon-tg");
+    background-size: 24px 19px;
+
+    &:hover {
+      mask-image: url("img/sprite.svg#icon-tg-mask");
+    }
+  }
+
+  &--yt {
+    background-image: url("img/sprite.svg#icon-yt");
+    background-size: 20px 17px;
+
+    &:hover {
+      mask-image: url("img/sprite.svg#icon-yt-mask");
+    }
+  }
 }
 
 .footer {
@@ -55,6 +87,18 @@
 .footer__text-logo-link {
   padding-top: 38px;
   padding-bottom: 14px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;

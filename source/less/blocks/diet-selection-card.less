@@ -169,10 +169,29 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  width: 130px;
+  width: 156px;
   margin-top: 19px;
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
+  gap: 25px;
+  background-image: url("../img/sprite.svg#icon-arrow");
+  background-size: 24px 12px;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  transition: 0.1s;
+
+  &:hover {
+    background-image: url("../img/sprite.svg#icon-arrow-hover");
+    background-size: 32px 12px;
+    transition: 0.1s;
+    background-position: right center;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -182,24 +201,5 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 27px;
-  }
-
-  &::after {
-    content: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' d='M0 6h18'/%3E%3Cpath d='m24 6-6.8 5.2V.8L24 6Z' fill='%23000'/%3E%3C/svg%3E");
-    width: 24px;
-    height: 12px;
-    position: absolute;
-    left: 100px;
-    bottom: 5px;
-
-    @media (min-width: @tablet-width) {
-      left: 127px;
-      bottom: 20px;
-    }
-
-    @media (min-width: @desktop-width) {
-      left: 131px;
-      bottom: 21px;
-    }
   }
 }

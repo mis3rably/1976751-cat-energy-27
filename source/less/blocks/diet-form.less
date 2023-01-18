@@ -8,6 +8,7 @@
   gap: 13px;
   word-break: keep-all;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -32,11 +33,17 @@
   }
 }
 
+.diet-form__icon {
+  position: absolute;
+  right: 13px;
+}
+
 .diet-form__label--checkbox:not(:first-child) {
   @media (min-width: @tablet-width) {
     margin-top: 0;
   }
 }
+
 
 .diet-form__label--radio,
 .diet-form__label--checkbox {
@@ -72,6 +79,15 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.diet-form__label:hover .diet-form__marker--radio,
+.diet-form__label:hover .diet-form__marker--checkbox {
+  border: 1px solid @radio-grey;
+}
+
+.diet-form__label:has(.diet-form__input:disabled) {
+  opacity: 0.3;
 }
 
 .diet-form__marker--radio {
@@ -121,12 +137,13 @@
 .diet-form__input {
   min-width: 0;
   padding: 0 20px;
+  border: 1px solid @special-darken-grey;
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+  }
 
   &--email {
-    background-image: url("../img/sprite.svg#input-email");
-    background-size: 17px 13px;
-    background-repeat: no-repeat;
-    background-position: right 17px center;
     padding-right: 35px;
     padding-left: 11px;
     padding-top: 3px;
@@ -138,10 +155,6 @@
   }
 
   &--tel {
-    background-image: url("../img/sprite.svg#input-tel");
-    background-size: 15px 15px;
-    background-repeat: no-repeat;
-    background-position: right 13px center;
     padding-right: 35px;
     padding-left: 13px;
     padding-top: 7px;
@@ -159,7 +172,6 @@
     height: 45px;
     flex-grow: 1;
     flex-shrink: 1;
-    border: 1px solid @special-darken-grey;
     box-sizing: border-box;
 
     @media (min-width: @desktop-width) {
@@ -185,6 +197,14 @@
       line-height: 30px;
     }
   }
+
+  &--error {
+    outline: 2px solid @error;
+  }
+}
+
+.diet-form__input--error + .diet-form__icon {
+  filter: invert(88%) sepia(31%) saturate(7049%) hue-rotate(307deg) brightness(98%) contrast(106%);
 }
 
 .diet-form__input::-webkit-outer-spin-button,
@@ -487,4 +507,8 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
+}
+
+.diet-form__input:focus-visible + .diet-form__icon {
+  filter: invert(68%) sepia(49%) saturate(540%) hue-rotate(54deg) brightness(83%) contrast(96%);
 }
