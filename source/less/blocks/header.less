@@ -39,16 +39,15 @@
 
   @media (min-width: @tablet-width) {
     position: static;
-    width: 440px;
     gap: 32px;
     flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
     position: static;
-    width: 480px;
     gap: 32px;
     flex-wrap: wrap;
+    max-width: 1000px;
   }
 }
 
@@ -73,6 +72,11 @@
     background-color: transparent;
     padding: 0;
     border-top-color: transparent;
+    max-width: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 172px;
   }
 
   &--disabled {
