@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -76,17 +76,23 @@
           <fieldset class="diet-form__group diet-form__group--contacts">
             <div class="diet-form__title-wrapper page__centerer">
               <h2 class="diet-form__title">
-                Контактные данные <br> (владельца кота)
+                Контактные данные&nbsp; <br> (владельца кота)
               </h2>
             </div>
             <div class="diet-form__wrapper diet-form__wrapper--2-columns diet-form__wrapper--contacts">
               <label class="diet-form__label">
                 E-mail:*
                 <input class="diet-form__input diet-form__input--email" type="email" name="email" value="kuklachev@gmail.com">
+                <svg class="diet-form__icon" width="17" height="13">
+                  <use xlink:href="img/sprite.svg#input-email"></use>
+                </svg>
               </label>
               <label class="diet-form__label">
                 Телефон:*
                 <input class="diet-form__input diet-form__input--tel" type="tel" name="phone-number" value="8 (960) 900-60-90">
+                <svg class="diet-form__icon" width="17" height="13">
+                  <use xlink:href="img/sprite.svg#input-tel"></use>
+                </svg>
               </label>
             </div>
           </fieldset>
@@ -133,8 +139,8 @@
         <section class="office-location office-location--grey">
           <div class="office-location__centerer">
             <div class="office-location__wrapper">
-              <h2 class="office-location__title">Приглашаем <br> к сотрудничеству дилеров!</h2>
-              <address class="office-location__address">
+              <h2 class="office-location__title">Приглашаем<br> к сотрудничеству дилеров!</h2>
+              <address class="office-location__address office-location__address--br-none">
                 ул. Большая Конюшенная, д. 19/8 <br>
                 <span class="office-location__city">Санкт-Петербург</span>
               </address>
@@ -153,7 +159,7 @@
             <li class="footer__socials-item">
               <a class="footer__socials-link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Ссылка на HTMLAcademy в Вконтакте.</span>
-                <svg class="footer__socials-link-logo" width="27" height="17">
+                <svg class="footer__socials-link-logo" width="24" height="19">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
@@ -176,9 +182,11 @@
             </li>
           </ul>
           <div class="footer__copyright copyright">
-            <h3 class="copyright__title">HTML Academy</h3>
             <a class="copyright__link" href="https://htmlacademy.ru/">
-              <img class="copyright__logo" src="img/logos/htmlacademy__logo.svg" alt="Логотип HTMLAcademy." width="27" height="34">
+              <h3 class="copyright__title">HTML Academy</h3>
+              <svg class="copyright__logo" aria-labelledby="Логотип HTMLAcademy." class="copyright__logo" width="27" height="34">
+                <use xlink:href="img/sprite.svg#copyright"></use>
+              </svg>
             </a>
           </div>
         </div>

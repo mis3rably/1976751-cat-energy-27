@@ -8,6 +8,7 @@
   gap: 13px;
   word-break: keep-all;
   align-items: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -32,11 +33,17 @@
   }
 }
 
+.diet-form__icon {
+  position: absolute;
+  right: 13px;
+}
+
 .diet-form__label--checkbox:not(:first-child) {
   @media (min-width: @tablet-width) {
     margin-top: 0;
   }
 }
+
 
 .diet-form__label--radio,
 .diet-form__label--checkbox {
@@ -51,8 +58,14 @@
 }
 
 .diet-form__wrapper--contacts .diet-form__label {
-  margin-top: 0;
-  gap: 20px;
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    gap: 20px;
+  }
 }
 
 .diet-form__marker {
@@ -66,6 +79,15 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.diet-form__label:hover .diet-form__marker--radio,
+.diet-form__label:hover .diet-form__marker--checkbox {
+  border: 1px solid @radio-grey;
+}
+
+.diet-form__label:has(.diet-form__input:disabled) {
+  opacity: 0.3;
 }
 
 .diet-form__marker--radio {
@@ -115,11 +137,17 @@
 .diet-form__input {
   min-width: 0;
   padding: 0 20px;
+  border: 1px solid @special-darken-grey;
+
+  &:hover {
+    border-color: @darken-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+  }
 
   &--email {
-    background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.5 5.5v8h17v-8M.5.5h17v2L9 8.5l-8.5-6v-2Z' stroke='%23000' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 17px center;
     padding-right: 35px;
     padding-left: 11px;
     padding-top: 3px;
@@ -131,9 +159,6 @@
   }
 
   &--tel {
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5 0.5V5.5H2.5V10.5H5.5V15.5H3C1.5 15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: right 13px center;
     padding-right: 35px;
     padding-left: 13px;
     padding-top: 7px;
@@ -151,7 +176,6 @@
     height: 45px;
     flex-grow: 1;
     flex-shrink: 1;
-    border: 1px solid @special-darken-grey;
     box-sizing: border-box;
 
     @media (min-width: @desktop-width) {
@@ -177,6 +201,14 @@
       line-height: 30px;
     }
   }
+
+  &--error {
+    outline: 2px solid @error;
+  }
+}
+
+.diet-form__input--error + .diet-form__icon {
+  filter: invert(88%) sepia(31%) saturate(7049%) hue-rotate(307deg) brightness(98%) contrast(106%);
 }
 
 .diet-form__input::-webkit-outer-spin-button,
@@ -195,10 +227,10 @@
 
   &--contacts {
     margin-top: 35px;
+    gap: 0;
 
     @media (min-width: @tablet-width) {
       margin-top: 74px;
-      gap: 27px;
     }
 
     @media (min-width: @desktop-width) {
@@ -219,7 +251,7 @@
 
     @media (min-width: @desktop-width) {
       width: 100%;
-      margin-top: 57px;
+      margin-top: 55px;
       margin-left: 0;
       margin-right: 0;
     }
@@ -250,7 +282,7 @@
 
   &--basic {
     @media (min-width: @tablet-width) {
-      padding-top: 67px;
+      padding-top: 44px;
       gap: 65px;
     }
   }
@@ -283,13 +315,13 @@
 
 .diet-form__submit-button {
   width: 100%;
-  height: 40px;
+  padding: 10px;
   font-size: 16px;
   line-height: 20px;
 
   @media (min-width: @tablet-width) {
     width: 282px;
-    height: 52px;
+    padding: 18px;
     font-size: 20px;
     line-height: 0px;
   }
@@ -313,6 +345,14 @@
   border: 1px solid @special-darken-grey;
   resize: none;
   min-height: 150px;
+
+  &:hover {
+    border-color: @darken-grey;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @dark-grey;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 174px;
@@ -479,4 +519,8 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
+}
+
+.diet-form__input:focus-visible + .diet-form__icon {
+  filter: invert(68%) sepia(49%) saturate(540%) hue-rotate(54deg) brightness(83%) contrast(96%);
 }

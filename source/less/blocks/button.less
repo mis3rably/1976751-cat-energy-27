@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &--bigger-content {
     @media (min-width: @tablet-width) {
@@ -17,10 +18,26 @@
   &--primary {
     color: @white;
     background-color: @green;
+
+    &:hover {
+      background-color: @darken-green;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
 
   &--secondary {
     color: @dark-grey;
     background-color: @basic-grey;
+
+    &:hover {
+      background-color: @hover-grey;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
 }

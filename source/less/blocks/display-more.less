@@ -67,6 +67,7 @@
   height: 30px;
   display: block;
   margin: 0 auto;
+  transition: width 0.2s;
 
   @media (min-width: @tablet-width) {
     width: 60px;
@@ -109,12 +110,22 @@
   }
 }
 
+.display-more__link:hover::before {
+  width: 28px;
+}
+
+.display-more__link:hover::after {
+  width: 28px;
+}
+
 .display-more__button {
+  font-size: 16px;
+  line-height: 20px;
   margin-top: 21px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 40px;
+  padding: 10px;
 
   @media (min-width: @tablet-width) {
     margin-top: 87px;
