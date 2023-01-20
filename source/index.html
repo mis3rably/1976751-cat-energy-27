@@ -8,6 +8,12 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -63,7 +69,7 @@
           <li class="diet-selection__item diet-selection-card">
             <div class="diet-selection-card__img-wrapper">
               <svg class="diet-selection-card__img diet-selection-card__img--slim" width="36" height="50">
-                <use href="img/sprite.svg#diet-slim" xmlns:xlink="http://www.w3.org/2000/xlink"></use>
+                <use href="img/sprite.svg#diet-slim"></use>
               </svg>
             </div>
             <div class="diet-selection-card__column">
@@ -75,10 +81,10 @@
                 лазить по деревьям? Пора на диету! Cat Energy Slim поможет
                 вашему питомцу сбросить лишний вес.
               </p>
-              <a class="diet-selection-card__link" href="catalog.html">
+              <a class="diet-selection-card__link" href="catalog-slim.html">
                 Каталог SLIM
                 <svg width="24" height="12">
-                  <use href="img/sprite.svg#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                  <use href="img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
             </div>
@@ -86,7 +92,7 @@
           <li class="diet-selection__item diet-selection-card">
             <div class="diet-selection-card__img-wrapper">
               <svg class="diet-selection-card__img diet-selection-card__img--pro" width="67" height="28">
-                <use href="img/sprite.svg#diet-pro" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use href="img/sprite.svg#diet-pro"></use>
               </svg>
             </div>
             <div class="diet-selection-card__column">
@@ -98,10 +104,10 @@
                 Серия Cat Energy Pro поможет вашему коту нарастить
                 необходимые мышцы!
               </p>
-              <a class="diet-selection-card__link" href="catalog.html">
+              <a class="diet-selection-card__link" href="catalog-pro.html">
                 Каталог PRO
                 <svg width="24" height="12">
-                  <use href="img/sprite.svg#icon-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                  <use href="img/sprite.svg#icon-arrow"></use>
                 </svg>
               </a>
             </div>
@@ -148,7 +154,7 @@
               </svg>
             </div>
             <p class="diet-instruction-card__text">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br> вашего питомца!
             </p>
           </li>
         </ul>
@@ -246,7 +252,7 @@
         <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/">
             <h3 class="copyright__title">HTML Academy</h3>
-            <svg class="copyright__logo" aria-labelledby="Логотип HTMLAcademy." class="copyright__logo" width="27" height="34">
+            <svg class="copyright__logo" aria-label="Логотип HTMLAcademy." width="27" height="34">
               <use xlink:href="img/sprite.svg#copyright"></use>
             </svg>
           </a>

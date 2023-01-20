@@ -13,6 +13,10 @@
     line-height: 26px;
     width: 164px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+  }
 }
 
 .office-location__address {
@@ -66,7 +70,7 @@
 
 .office-location__centerer {
   @media (min-width: @desktop-width) {
-    width: 1440px;
+    width: 565px;
     height: 200px;
     position: absolute;
     left: 0;
@@ -89,11 +93,10 @@
 
   @media (min-width: @desktop-width) {
     width: 565px;
-    max-height: 198px;
+    height: 198px;
+    left: -58%;
     position: absolute;
     background-color: @white;
-    left: 110px;
-    top: -8px;
     padding: 60px 79px;
     justify-content: flex-start;
     gap: 93px;
@@ -106,7 +109,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 60px 79px 37px;
+      padding: 52px 79px 37px;
     }
   }
 }

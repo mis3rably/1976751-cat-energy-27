@@ -124,13 +124,13 @@
 }
 
 .diet-selection-card__img-wrapper .diet-selection-card__img--slim {
-  top: -3px;
-  left: 6px;
+  top: 0;
+  left: 10px;
 
   @media (min-width: @tablet-width) {
     width: 140px;
     height: 194px;
-    top: -4px;
+    top: -9px;
     left: 29px;
   }
 
@@ -143,14 +143,14 @@
 }
 
 .diet-selection-card__img-wrapper .diet-selection-card__img--pro {
-  top: 11px;
-  left: -9px;
+  top: 14px;
+  left: -6px;
 
   @media (min-width: @tablet-width) {
     width: 268px;
     height: 112px;
-    top: 42px;
-    left: -47px;
+    top: 45px;
+    left: -36px;
   }
 
   @media (min-width: @desktop-width) {
@@ -174,8 +174,12 @@
   display: flex;
   align-items: center;
   position: relative;
-  gap: 25px;
+  gap: 16px;
   transition: 0.1s;
+
+  @media (min-width: @tablet-width) {
+    gap: 25px;
+  }
 
   &:hover svg {
     transform: scale(1.2, 1) translateX(2px);

@@ -8,6 +8,12 @@
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -46,7 +52,7 @@
               <div class="product-card__image-wrapper">
                 <picture>
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog-card/pro-500g-chicken--tablet.webp 1x, img/catalog-card/pro-500g-chicken--tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-card/pro-500g-chicken--tablet.webp 1x, img/catalog-card/pro-500g-chicken--tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/catalog-card/pro-500g-chicken.webp 1x, img/catalog-card/pro-500g-chicken@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/catalog-card/pro-500g-chicken--tablet.png 1x, img/catalog-card/pro-500g-chicken--tablet@2x.png 2x">
                   <img class="product-card__image" src="img/catalog-card/pro-500g-chicken.png" srcset="img/catalog-card/pro-500g-chicken@2x.png 2x" alt="Фотография продукта Cat Energy PRO.">
                 </picture>
@@ -259,7 +265,7 @@
           </li>
           <li class="products-catalog__item display-more">
             <div class="display-more__wrapper">
-              <a href="#" class="display-more__link"></a>
+              <a class="display-more__link" href="order.html"></a>
               <h2 class="display-more__title">Показать еще&nbsp; <br> 100500 товаров</h2>
               <p class="display-more__description">На самом деле вкусов&nbsp; <br> гораздо больше!</p>
             </div>
@@ -373,7 +379,7 @@
         <div class="footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/">
             <h3 class="copyright__title">HTML Academy</h3>
-            <svg class="copyright__logo" aria-labelledby="Логотип HTMLAcademy." class="copyright__logo" width="27" height="34">
+            <svg class="copyright__logo" aria-label="Логотип HTMLAcademy." width="27" height="34">
               <use xlink:href="img/sprite.svg#copyright"></use>
             </svg>
           </a>
