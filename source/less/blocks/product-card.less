@@ -9,7 +9,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 37px 40px;
+    padding: 0 38px 40px;
+    background: linear-gradient(180deg, @white 81px, @basic-grey 81px);
   }
 
   &::after {
@@ -28,13 +29,6 @@
   }
 }
 
-.products-catalog__item {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .product-card__content {
   display: flex;
 
@@ -47,7 +41,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    gap: 46px;
+    gap: 43px;
   }
 }
 
@@ -78,13 +72,16 @@
 }
 
 .product-card__name {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
   width: 54%;
+  display: block;
+  text-decoration: none;
+  color: @special-dark-grey;
 
   br {
     @media (min-width: @tablet-width) {
@@ -101,9 +98,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
+    width: 145px;
     font-size: 20px;
     line-height: 21px;
+    margin: 0 15px;
   }
 }
 
@@ -119,7 +117,7 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding: 7px 0 9px;
+    padding: 7px 2px 9px;
     position: relative;
 
     &::after {
@@ -129,6 +127,12 @@
       height: 1px;
       background-color: @darken-grey;
       bottom: 0;
+    }
+  }
+
+  &--padding-vertical-none {
+    @media (min-width: @desktop-width) {
+      padding-right: 0;
     }
   }
 }
@@ -148,7 +152,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 30px;
+    margin-top: 34px;
   }
 }
 

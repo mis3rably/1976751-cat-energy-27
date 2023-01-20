@@ -1,5 +1,5 @@
 .header__link {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -89,7 +89,7 @@
       width: 100%;
       height: 2px;
       position: absolute;
-      bottom: -7px;
+      bottom: -9px;
       left: 0;
       background-color: @green;
     }
@@ -240,6 +240,14 @@
 
 .header__nav {
   margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .header__nav--nojs {

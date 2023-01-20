@@ -1,5 +1,5 @@
 .diet-form__label {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
@@ -35,7 +35,15 @@
 
 .diet-form__icon {
   position: absolute;
-  right: 13px;
+  right: 16px;
+
+  @media (min-width: @tablet-width) {
+    right: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 19px;
+  }
 }
 
 .diet-form__label--checkbox:not(:first-child) {
@@ -184,7 +192,7 @@
   }
 
   &[type] {
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
@@ -215,6 +223,10 @@
 .diet-form__input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.diet-form__input[type="number"] {
+  appearance: textfield;
 }
 
 .diet-form__wrapper {
@@ -276,7 +288,7 @@
     @media (min-width: @desktop-width) {
       gap: 84px;
       padding: 31px 110px 82px;
-      margin-top: 13px;
+      margin-top: 17px;
     }
   }
 
@@ -364,12 +376,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 76px;
+    margin-top: 72px;
     min-height: 174px;
+    padding-left: 19px;
   }
 
   &::placeholder {
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
@@ -446,11 +459,19 @@
 
   &--contacts {
     padding-top: 31px;
+
+    @media (min-width: @desktop-width) {
+      padding-top: 28px;
+    }
   }
 
   &--comments {
     padding-top: 14px;
     padding-bottom: 19px;
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 22px;
+    }
   }
 }
 
@@ -460,7 +481,7 @@
 }
 
 .diet-form__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
@@ -513,8 +534,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: -40px;
-    margin-top: 42px;
+    margin-left: -38px;
+    margin-top: 43px;
   }
 }
 

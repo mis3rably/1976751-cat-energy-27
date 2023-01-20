@@ -1,6 +1,6 @@
 .office-location__title {
   margin: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -73,11 +73,12 @@
     width: 565px;
     height: 200px;
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+    left: 7.65%;
+    top: 96px;
+
+    &--index {
+      top: 88px;
+    }
   }
 }
 
@@ -94,7 +95,6 @@
   @media (min-width: @desktop-width) {
     width: 565px;
     height: 198px;
-    left: -58%;
     position: absolute;
     background-color: @white;
     padding: 60px 79px;
@@ -109,7 +109,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 52px 79px 37px;
+      padding: 55px 79px 37px;
     }
   }
 }
