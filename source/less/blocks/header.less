@@ -47,7 +47,7 @@
     position: static;
     gap: 32px;
     flex-wrap: wrap;
-    max-width: 1000px;
+    max-width: 500px;
   }
 }
 
@@ -143,6 +143,10 @@
   &--underline {
     border-bottom: 1px solid @special-grey;
 
+    &:has(.header__nav--nojs) {
+      border-bottom: none;
+    }
+
     @media (min-width: @tablet-width) {
       border-bottom: none;
     }
@@ -155,10 +159,6 @@
   @media (min-width: @desktop-width) {
     padding: 53px 110px 29px;
   }
-}
-
-.header--underline:has(.header__nav--nojs) {
-  border-bottom: none;
 }
 
 .header__nav--closed .header__toggle {

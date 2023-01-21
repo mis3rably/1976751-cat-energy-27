@@ -10,6 +10,15 @@
   align-items: center;
   position: relative;
 
+  &:has(.diet-form__input:disabled) {
+    opacity: 0.3;
+  }
+
+  &:hover .diet-form__marker--radio,
+  &:hover .diet-form__marker--checkbox {
+    border: 1px solid @radio-grey;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -46,9 +55,11 @@
   }
 }
 
-.diet-form__label--checkbox:not(:first-child) {
-  @media (min-width: @tablet-width) {
-    margin-top: 0;
+.diet-form__label--checkbox {
+  &:not(:first-child) {
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -89,63 +100,54 @@
   }
 }
 
-.diet-form__label:hover .diet-form__marker--radio,
-.diet-form__label:hover .diet-form__marker--checkbox {
-  border: 1px solid @radio-grey;
-}
-
-.diet-form__label:has(.diet-form__input:disabled) {
-  opacity: 0.3;
-}
-
 .diet-form__marker--radio {
   border-radius: 50%;
-}
-
-.diet-form__input:checked + .diet-form__marker--radio::after {
-  content: "";
-  background-color: @green;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-
-  @media (min-width: @tablet-width) {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-.diet-form__input:checked + .diet-form__marker--checkbox::after {
-  content: "";
-  background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
-  background-repeat: no-repeat;
-  width: 18px;
-  height: 14px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-
-  @media (min-width: @tablet-width) {
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='19' viewBox='0 0 24 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15.499L1.4 6.90101L0 8.48485L9 18.6667L24 1.69697L22.6 0L9 15.499Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
-    width: 24px;
-    height: 18px;
-  }
 }
 
 .diet-form__input {
   min-width: 0;
   padding: 0 20px;
   border: 1px solid @special-darken-grey;
+
+  &:checked + .diet-form__marker--radio::after {
+    content: "";
+    background-color: @green;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    @media (min-width: @tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &:checked + .diet-form__marker--checkbox::after {
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 11.718L1.3 5.26951L0.25 6.45739L7 14.0938L18.25 1.36648L17.2 0.09375L7 11.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    @media (min-width: @tablet-width) {
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='19' viewBox='0 0 24 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 15.499L1.4 6.90101L0 8.48485L9 18.6667L24 1.69697L22.6 0L9 15.499Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+      width: 24px;
+      height: 18px;
+    }
+  }
 
   &:hover {
     border-color: @darken-grey;
@@ -177,52 +179,63 @@
     }
   }
 
-  &[type="text"],
-  &[type="number"],
-  &[type="email"],
-  &[type="tel"] {
-    height: 45px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    box-sizing: border-box;
-
-    @media (min-width: @desktop-width) {
-      height: 50px;
-    }
-  }
-
-  &[type] {
-    font-family: "Oswald", "Arial", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-    color: @dark-grey;
-
-    @media (min-width: @tablet-width) {
-      font-size: 20px;
-      line-height: 30px;
-    }
-
-    @media (min-width: @desktop-width) {
-      font-size: 20px;
-      line-height: 30px;
-    }
-  }
-
   &--error {
     outline: 2px solid @error;
   }
+
+  &--error + .diet-form__icon {
+    filter: invert(88%) sepia(31%) saturate(7049%) hue-rotate(307deg) brightness(98%) contrast(106%);
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &:focus-visible + .diet-form__icon {
+    filter: invert(68%) sepia(49%) saturate(540%) hue-rotate(54deg) brightness(83%) contrast(96%);
+  }
 }
 
-.diet-form__input--error + .diet-form__icon {
-  filter: invert(88%) sepia(31%) saturate(7049%) hue-rotate(307deg) brightness(98%) contrast(106%);
+.diet-form__input[type="text"],
+.diet-form__input[type="number"],
+.diet-form__input[type="email"],
+.diet-form__input[type="tel"] {
+  height: 45px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-sizing: border-box;
+
+  @media (min-width: @desktop-width) {
+    height: 50px;
+  }
 }
 
-.diet-form__input::-webkit-outer-spin-button,
-.diet-form__input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
+.diet-form__input[type="checkbox"],
+.diet-form__input[type="radio"] {
+  &:focus-visible + .diet-form__marker {
+    outline: 2px solid @dark-grey;
+  }
+}
+
+.diet-form__input[type] {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .diet-form__input[type="number"] {
@@ -453,10 +466,6 @@
     }
   }
 
-  &--space-between {
-    justify-content: space-between;
-  }
-
   &--contacts {
     padding-top: 31px;
 
@@ -552,8 +561,4 @@
   @media (min-width: @desktop-width) {
     margin: 0;
   }
-}
-
-.diet-form__input:focus-visible + .diet-form__icon {
-  filter: invert(68%) sepia(49%) saturate(540%) hue-rotate(54deg) brightness(83%) contrast(96%);
 }

@@ -122,8 +122,17 @@
 .office-location__map {
   width: 100%;
   height: 362px;
+  background-image: url("../img/static-map.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     height: 400px;
+    background-image: url("../img/static-map--tablet.jpg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/static-map--desktop.jpg");
   }
 }
