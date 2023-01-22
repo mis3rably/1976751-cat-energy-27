@@ -127,12 +127,24 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/static-map@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     height: 400px;
     background-image: url("../img/static-map--tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/static-map--tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     background-image: url("../img/static-map--desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/static-map--tablet@2x.jpg");
+    }
   }
 }
